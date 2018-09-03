@@ -1,0 +1,233 @@
+.footer {
+  color: #ffffff;
+  @extend %box-align-left;
+  @extend %box-vertical;
+
+  .footer-contact {
+    background: $light-main-color;
+    justify-content: space-around;
+    align-items: center;
+    @extend %box-horizontal;
+    @include width();
+
+    .status--off {
+      color: $quero-red;
+    }
+
+    .status--on {
+      color: $quero-green;
+    }
+
+    .show-sm {
+      display: none;
+
+      @media #{$mq-md} {
+        display: inline;
+      }
+    }
+
+    .show-lg {
+      display: inline;
+
+      @media #{$mq-md} {
+        display: none;
+      }
+    }
+
+    .footer-contact__item--telefone {
+      justify-content: space-around;
+      @extend %box-horizontal;
+      @include container;
+      @include margin(10px, 0, 10px, 0);
+      @include width(25%);
+
+      @media #{$mq-md} {
+        @include container(15px);
+        @include font-size(13px);
+        @include width(70%);
+      }
+    }
+
+    .footer-contact__item {
+      justify-content: space-around;
+      @extend %box-horizontal;
+      @include container;
+      @include margin(10px, 0, 10px, 0);
+      @include width(25%);
+
+      @media #{$mq-md} {
+        flex-direction: column;
+        @include container(15px);
+        @include font-size(13px);
+      }
+    }
+
+    .footer-contact__item__content {
+      @extend %box-vertical;
+    }
+  }
+
+  .footer-links {
+    background: $main-color;
+    @extend %box-horizontal;
+    @include font-size();
+    @include width();
+
+    @media #{$mq-md} {
+      flex-direction: column;
+    }
+
+    .footer-links__items {
+      justify-content: space-around;
+      @extend %box-align-left;
+      @extend %box-horizontal;
+      @include width();
+
+      @media #{$mq-md} {
+        display: none;
+      }
+
+      .footer-links__items__group {
+        @extend %box-align-left;
+        @extend %box-vertical;
+
+        a {
+          @include margin(0, 0, 0, 10px);
+        }
+      }
+    }
+
+    .footer-links__items--mobile {
+      display: none;
+      @include margin(10px, 10px, 10px, 0);
+      @include width();
+
+      @media #{$mq-md} {
+        align-items: center;
+        display: flex;
+        flex-flow: wrap;
+        justify-content: space-around;
+      }
+    }
+  }
+
+  .footer-trends {
+    background: $main-color;
+    @extend %box-horizontal;
+    @include font-size();
+    @include width();
+
+    @media #{$mq-md} {
+      flex-direction: column;
+    }
+
+    .footer-trends__items {
+      margin: 10px;
+      @extend %box-align-left;
+      @extend %box-horizontal;
+      @include width();
+
+      @media #{$mq-md} {
+        display: none;
+      }
+
+      .footer-trends__items__group {
+        align-items: flex-start;
+        @extend %box-align-left;
+        @extend %box-vertical;
+
+        a {
+          margin-bottom: 10px;
+        }
+
+        .footer-trends__items__content {
+          @extend %box-align-center;
+          @extend %box-horizontal;
+          @include padding(0, 5px, 0, 0);
+
+          .footer-img {
+            img {
+              @include height();
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    background: $dark-main-color;
+    @extend %box-align-left;
+    @extend %box-horizontal;
+    @include font-size(12px);
+    @include width();
+
+    @media #{$mq-md} {
+      flex-direction: column;
+    }
+
+    .footer-bottom__item {
+      @extend %box-align-left;
+      @extend %box-vertical;
+      @include padding(0, 10px, 0, 10px);
+      @include width(45%);
+
+      p {
+        @extend %box-align-center;
+        @extend %box-horizontal;
+      }
+
+      @media #{$mq-md} {
+        @include width();
+      }
+    }
+
+    .footer-bottom__item--mobile {
+      display: none;
+
+      @media #{$mq-md} {
+        display: block;
+      }
+    }
+
+    .footer-bill {
+      justify-content: space-around;
+      @extend %box-horizontal;
+      @include font-size();
+      @include height();
+      @include margin();
+      @include width();
+
+      .footer-bill__item {
+        flex-wrap: wrap;
+        @extend %box-horizontal;
+        @include margin(10px, 0, 10px, 0);
+
+        img {
+          background: #ffffff;
+          @include border-radius(2px);
+          @include height(20px);
+          @include width(30px);
+        }
+      }
+    }
+
+    .footer-medias {
+      align-items: center;
+      background: $dark-main-color;
+      display: none;
+      flex-direction: row;
+      justify-content: space-around;
+      @include font-size();
+      @include width();
+
+      @media #{$mq-md} {
+        display: flex;
+      }
+
+      .footer-medias__item {
+        @include padding(20px, 0, 20px, 0);
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@mixin border($stroke: 1px, $color: $quero-gray, $radius: $quero-radius) {
+  border: $stroke solid $color;
+  border-radius: $radius;
+}
+
+@mixin border-radius($radius: $quero-radius) {
+  border-radius: $radius;
+}
+
+@mixin container($distance: 15px) {
+  margin-right: $distance;
+  margin-left: $distance;
+}
+
+@mixin font-size($size: $quero-font-size) {
+  font-size: $size;
+}
+
+@mixin icon-rounded($radius: 50px, $align: 60px) {
+  border: 1px solid $quero-gray;
+  border-radius: 50%;
+  height: $radius;
+  line-height: $align;
+  text-align: center;
+  width: $radius;
+}
+
+@mixin height($height: 40px) {
+  height: $height;
+}
+
+@mixin margin($top: $quero-margin, $right: $quero-margin, $bottom: $quero-margin, $left: $quero-margin) {
+  margin: $top $right $bottom $left;
+}
+
+@mixin padding($top: $quero-padding, $right: $quero-padding, $bottom: $quero-padding, $left: $quero-padding) {
+  padding: $top $right $bottom $left;
+}
+
+@mixin width($width: 100%) {
+  width: $width;
+}

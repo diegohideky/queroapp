@@ -1,0 +1,43 @@
+.btn {
+  border: #000000;
+  @extend %box-horizontal;
+  @extend %box-align-left;
+}
+
+.btn--addon {
+  background: $quero-gray;
+  border: 1px solid $quero-gray;
+  color: $quero-orange;
+  @extend %btn-height;
+  @include border-radius();
+  @include padding();
+
+  &:first-child {
+    @extend %boder-radius-addon-first-child;
+  }
+
+  &:last-child {
+    @extend %boder-radius-addon-last-child;
+  }
+}
+
+.btn--block {
+  @extend %box-align-center;
+  @extend %btn-height;
+  @include width();
+}
+
+.btn--green {
+  background: $quero-green;
+  color: #ffffff;
+}
+
+.link {
+  color: $quero-orange;
+  @extend %box-horizontal;
+  @include padding(10px, 0, 0, 0);
+}
+
+.link--center {
+  @extend %box-align-center;
+}

@@ -1,0 +1,93 @@
+.form-section {
+  background: $quero-gray;
+  flex-flow: wrap;
+  @extend %box-align-left;
+  @extend %box-horizontal;
+  @include margin(10px, 0, 0, 0);
+
+  .form-section__left {
+    @extend %box-align-left;
+    @extend %box-vertical;
+    @include container;
+    @include width(45%);
+
+    @media #{$mq-md} {
+      @include container(15px);
+      @include width();
+    }
+
+    .wizard {
+      @extend %box-align-left;
+      @extend %box-vertical;
+      @include padding(0, 0, 0, 14px);
+
+      &:last-child{
+        border-left: 3px solid transparent;
+        padding-bottom: 0;
+      }
+    }
+
+    .wizard__item {
+      border: none;
+      border-left: 2px solid #181817;
+      box-sizing: border-box;
+      counter-increment: step-counter;
+      @extend %box-horizontal;
+      @include height(100px);
+      @include padding(0, 0, 18px, 18px);
+      @include width();
+
+      &:last-child{
+        border-left: 3px solid transparent;
+        padding-bottom: 0;
+      }
+
+      &::before {
+        background-color: $quero-gray;
+        content: counter(step-counter);
+        display: inline-block;
+        line-height: 40px;
+        margin-left: -40px;
+        position: absolute;
+        text-align: center;
+        @include border(2px, #000000, 50%);
+        @include height(40px);
+        @include width(40px);
+      }
+
+      span {
+        display: block;
+        @extend %box-align-left;
+        @extend %box-grow;
+        @include margin(5px, 0, 0, 15px);
+      }
+    }
+  }
+
+  .form-section__right {
+    background: #ffffff;
+    box-shadow: 2px 2px 2px darken($quero-gray, 20);
+    @extend %box-align-left;
+    @extend %box-vertical;
+    @include border-radius();
+    @include container;
+    @include margin();
+    @include width(45%);
+
+    @media #{$mq-md} {
+      @include container(15px);
+      @include width(100%);
+    }
+
+    .form {
+      @extend %box-align-left;
+      @extend %box-vertical;
+      @include container;
+      @include padding(0, 0, 15px, 0);
+
+      @media #{$mq-md} {
+        @include container(15px);
+      }
+    }
+  }
+}

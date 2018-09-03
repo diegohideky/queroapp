@@ -1,0 +1,82 @@
+.contact-section {
+  flex-flow: wrap;
+  @extend %box-align-left;
+  @extend %box-vertical;
+  @include container;
+  @include margin();
+
+  @media #{$mq-md} {
+    @include container(15px);
+  }
+
+  .contact-title {
+    @extend %box-align-left;
+    @extend %box-vertical;
+    @include width();
+  }
+
+  .contact-section__left {
+    @extend %box-align-left;
+    @extend %box-vertical;
+    @include width(45%);
+
+    @media #{$mq-md} {
+      @include width();
+    }
+
+    .contact {
+      @extend %box-align-left;
+      @extend %box-horizontal;
+
+      .contact__content {
+        @extend %box-vertical;
+        @include width(50%);
+      }
+
+      .contact__content__items {
+        @extend %box-align-left;
+        @extend %box-horizontal;
+
+        span {
+          @include margin(0, 2px, 0, 2px);
+        }
+      }
+    }
+  }
+
+  .contact-section__right {
+    @extend %box-align-left;
+    @extend %box-vertical;
+    @include width(45%);
+
+    @media #{$mq-md} {
+      @include width();
+    }
+  }
+
+  .form__group--addon {
+    @extend %box-align-left;
+    @extend %box-horizontal;
+    @include padding(10px, 0, 10px, 0);
+
+    .form-ctrl {
+      flex: 1;
+
+      &:not(:first-child) {
+        @extend %no-border-addon-first-child;
+      }
+
+      &:not(:last-child) {
+        @extend %no-border-addon-last-child;
+      }
+
+      &:first-child {
+        @extend %boder-radius-addon-first-child;
+      }
+
+      &:last-child {
+        @extend %boder-radius-addon-last-child;
+      }
+    }
+  }
+}

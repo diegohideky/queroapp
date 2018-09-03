@@ -1,0 +1,9 @@
+.top-section {
+  @extend %box-vertical;
+  @extend %box-align-left;
+  @include container;
+
+  @media #{$mq-md} {
+    @include container(15px);
+  }
+}

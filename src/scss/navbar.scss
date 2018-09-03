@@ -1,0 +1,126 @@
+.navbar {
+  background: $quero-gray;
+  @extend %box-vertical;
+  justify-content: flex-start;
+
+  .navbar__menu {
+    @extend %box-align-center;
+    @extend %box-horizontal;
+    @include padding(0, 0, 0, 0);
+    @include width();
+
+    .navbar__menu__item--logo {
+      @extend %box-align-center;
+      @extend %box-grow;
+      @extend %box-vertical;
+      @include container(15px);
+
+      .brand-logo {
+        @include margin(5px, 5px, 5px, 5px);
+        @include container(15px);
+
+        img {
+          @include width(110px);
+
+          @media #{$mq-md} {
+            max-height: 100px;
+            @include width(100px);
+          }
+
+          @media #{$mq-md} {
+            max-height: 80px;
+            @include width(80px);
+          }
+        }
+      }
+    }
+
+    .navbar__menu__item {
+      @extend %box-align-center;
+      @extend %box-horizontal;
+      @include container(15px);
+
+      @media #{$mq-md} {
+        display: none;
+      }
+
+      a {
+        color: #000000;
+        @extend %box-align-center;
+        @extend %box-horizontal;
+        @include font-size(12px);
+
+        &:hover {
+          color: $quero-orange;
+        }
+
+        span {
+          @include padding(0, 5px, 0, 5px);
+        }
+      }
+    }
+
+    .navbar__menu__item--mobile {
+      display: none;
+      flex-direction: column;
+      @extend %box-align-center;
+      @include container(15px);
+
+      @media #{$mq-md} {
+        display: flex;
+      }
+
+      a {
+        text-decoration: none;
+        color: #000000;
+        @extend %box-vertical;
+        @extend %box-align-center;
+        @include font-size(12px);
+
+        span {
+          @include padding(0, 5px, 0, 5px);
+        }
+      }
+    }
+  }
+
+  .navbar__submenu {
+    align-items: center;
+    background: $light-main-color;
+    justify-content: flex-start;
+    @extend %box-horizontal;
+    @include height();
+    @include margin(0, 0, 0, 0);
+    @include padding(5px, 0px, 5px, 0px);
+    @include width();
+
+    .navbar__submenu__item--brand {
+      @extend %box-align-left;
+      @extend %box-grow;
+      @extend %box-horizontal;
+      @include container(15px);
+    }
+
+    .navbar__submenu__item {
+      @extend %box-align-right;
+      @extend %box-horizontal;
+      @include container(15px);
+      @include padding(0, 5px, 0, 0);
+
+      @media #{$mq-md} {
+        display: none;
+      }
+    }
+
+    .navbar__submenu__item--mobile {
+      display: none;
+      @extend %box-align-right;
+      @include container(15px);
+      @include padding(0, 5px, 0, 0);
+
+      @media #{$mq-md} {
+        display: flex;
+      }
+    }
+  }
+}

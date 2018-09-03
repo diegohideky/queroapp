@@ -1,0 +1,28 @@
+.form-ctrl {
+  color: darken($quero-gray, 35);
+  @include border();
+  @include padding();
+}
+
+.form__group {
+  min-height: 50px;
+  @extend %box-vertical;
+  @include margin();
+  @include width();
+
+  label {
+    @include font-size(12px);
+  }
+
+  small {
+    font-style: italic;
+    @include font-size(12px);
+  }
+}
+
+.form__group--inline {
+  min-height: 50px;
+  @extend %box-horizontal;
+  @include margin(10px, 0, 10px, 0);
+  @include width();
+}

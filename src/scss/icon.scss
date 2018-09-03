@@ -1,0 +1,24 @@
+.icon {
+  img {
+    height: $icon-height;
+  }
+}
+
+.icon--2x {
+  img {
+    height: $icon-height * 2;
+  }
+}
+
+.icon-rounded {
+  @include icon-rounded();
+}
+
+.icon-rounded--2x {
+  @include icon-rounded(65px, 90px);
+}
+
+.icon-rounded--white {
+  background: #ffffff;
+  @include icon-rounded();
+}

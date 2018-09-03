@@ -1,0 +1,48 @@
+%box-vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+%box-horizontal {
+  display: flex;
+  flex-direction: row;
+}
+
+%box-align-left {
+  justify-content: flex-start;
+}
+
+%box-align-center {
+  justify-content: center;
+  align-items: center;
+}
+
+%box-align-right {
+  justify-content: flex-start;
+}
+
+%box-grow {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+
+%btn-height {
+  height: $btn-height;
+}
+
+%boder-radius-addon-first-child {
+  border-radius: 5px 0 0 5px;
+}
+
+%boder-radius-addon-last-child {
+  border-radius: 0 5px 5px 0;
+}
+
+%no-border-addon-first-child {
+  border-left: 0;
+}
+
+%no-border-addon-last-child {
+  border-right: 0;
+}
